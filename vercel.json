@@ -2,7 +2,8 @@
   "builds": [{ "src": "/app/main.py", "use": "@vercel/python" }],
   "routes": [
     {
-      "src": "/competitions/CDLP/clubs",
+      "src": "/(.*)",
+      "dest": "app/main.py",
       "headers": {
         "Access-Control-Allow-Origin": "*"
       }
